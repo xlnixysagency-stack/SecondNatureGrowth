@@ -6,111 +6,124 @@
     <title>Book a Call | Second Nature Growth</title>
     <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+
+<body class="book-page">
 
 <!-- NAV (LOGO ONLY) -->
 <header class="nav">
-    <div class="nav-inner">
-        <img src="assets/logo.png" alt="Second Nature Growth Logo" class="logo">
+    <div class="container nav-inner">
+        <img
+                src="assets/logo.png"
+                alt="Second Nature Growth"
+                class="logo"
+        />
     </div>
 </header>
 
-<!-- BOOKING SECTION -->
-<section class="booking">
-    <div class="booking-card">
-        <h1>Book a Call</h1>
-        <p class="booking-sub">
-            Fill out the form below. If we’re a good fit, we’ll reach out to schedule a call.
+<!-- BOOK SECTION -->
+<main class="book-container">
+
+    <div class="book-header">
+        <h1>Book a Strategy Call</h1>
+        <p>
+            Tell us a bit about your business. If we’re a good fit,
+            we’ll reach out to schedule a call.
         </p>
-
-        <form
-                action="https://formspree.io/f/xojnakql"
-                method="POST"
-                class="booking-form"
-        >
-
-            <!-- Email subject -->
-            <input type="hidden" name="_subject" value="New Book a Call Submission">
-
-            <!-- BUSINESS NAME -->
-            <div class="form-group">
-                <label>Business Name</label>
-                <input
-                        type="text"
-                        name="business_name"
-                        placeholder="Your business name"
-                        required
-                >
-            </div>
-
-            <!-- LOCATION -->
-            <div class="form-group">
-                <label>Business Location</label>
-                <input
-                        type="text"
-                        name="location"
-                        placeholder="City, Country"
-                        required
-                >
-            </div>
-
-            <!-- COMPANY SIZE -->
-            <div class="form-group">
-                <label>Company Size</label>
-                <select name="company_size" required>
-                    <option value="">Select number of staff</option>
-                    <option>1–5</option>
-                    <option>6–10</option>
-                    <option>11–25</option>
-                    <option>25+</option>
-                </select>
-            </div>
-
-            <!-- MAIN SERVICE -->
-            <div class="form-group">
-                <label>Main Service Offered</label>
-                <input
-                        type="text"
-                        name="main_service"
-                        placeholder="e.g. Cleaning, Landscaping, Removals"
-                        required
-                >
-            </div>
-
-            <!-- PHONE -->
-            <div class="form-group">
-                <label>Personal Phone Number</label>
-                <input
-                        type="tel"
-                        name="phone"
-                        placeholder="+1 555 555 5555"
-                        required
-                >
-            </div>
-
-            <!-- EMAIL -->
-            <div class="form-group">
-                <label>Personal Email</label>
-                <input
-                        type="email"
-                        name="email"
-                        placeholder="you@email.com"
-                        required
-                >
-            </div>
-
-            <!-- SUBMIT -->
-            <button type="submit" class="btn-primary full-width">
-                Request Call
-            </button>
-
-        </form>
+        <p style="margin-top:10px; font-size:14px; color:#9aa0ab;">
+            Trusted by 50+ service-based businesses
+        </p>
     </div>
-</section>
+
+    <form
+            action="https://formspree.io/f/xojnakql"
+            method="POST"
+            class="booking-form"
+    >
+        <!-- Email subject -->
+        <input type="hidden" name="_subject" value="New Book a Call Submission" />
+
+        <div class="form-group">
+            <label for="business_name">Business Name</label>
+            <input
+                    id="business_name"
+                    type="text"
+                    name="business_name"
+                    placeholder="Your business name"
+                    required
+            />
+        </div>
+
+        <div class="form-group">
+            <label for="location">Business Location</label>
+            <input
+                    id="location"
+                    type="text"
+                    name="location"
+                    placeholder="City, Country"
+                    required
+            />
+        </div>
+
+        <div class="form-group">
+            <label for="company_size">Company Size</label>
+            <select id="company_size" name="company_size" required>
+                <option value="">Select number of staff</option>
+                <option>1–5</option>
+                <option>6–10</option>
+                <option>11–25</option>
+                <option>25+</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="main_service">Main Service Offered</label>
+            <input
+                    id="main_service"
+                    type="text"
+                    name="main_service"
+                    placeholder="e.g. Cleaning, Landscaping, Removals"
+                    required
+            />
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Personal Phone Number</label>
+            <input
+                    id="phone"
+                    type="tel"
+                    name="phone"
+                    placeholder="+1 555 555 5555"
+                    required
+            />
+        </div>
+
+        <div class="form-group">
+            <label for="email">Personal Email</label>
+            <input
+                    id="email"
+                    type="email"
+                    name="email"
+                    placeholder="you@email.com"
+                    required
+            />
+        </div>
+
+        <button type="submit" class="submit-btn">
+            Request Call
+        </button>
+
+        <p class="form-note">
+            We typically respond within 24 hours.
+        </p>
+    </form>
+
+</main>
 
 <!-- FOOTER -->
 <footer class="footer">
-    <p>© 2026 Second Nature Growth</p>
+    <div class="container">
+        <p>© 2026 Second Nature Growth</p>
+    </div>
 </footer>
 
 </body>
